@@ -7,7 +7,7 @@
 </p>
 
 
-[Visit the website](https://uoerim.github.io/portfolio/)
+[Visit the website](https://uoerim.github.io/Portfolio/)
 
 ### Support
 
