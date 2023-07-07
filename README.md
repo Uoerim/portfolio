@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/docs/assets/svg/favicon.svg" width="150" />
+  <img src="/docs/assets/logo-U-favicon.svg" width="150" />
 </p>
 <h1 align="center">Lofi Player</h1>
 <p align="center">A simple lofi player with a pixelated style</p>
@@ -50,7 +50,7 @@ git clone https://github.com/uoerim/lofi-player.git
 </p>
 <p align="center">Lofi Player <a href="https://github.com/Uoerim/lofi-player/blob/main/LICENSE">is MIT licensed</a></p>
 <p align="center">
-  <img src="/docs/assets/svg/favicon.svg" width="35" />
+  <img src="/docs/assets/logo-U-favicon.svg" width="35" />
 </p>
   
 </samp>
