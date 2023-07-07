@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+//font-family: 'Paytone One', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+//font-family: 'Oswald', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+//font-family: 'Lalezar', cursive;
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap');
+//font-family: 'MuseoModerno', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+//font-family: 'Iceland', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+//font-family: 'Zen Dots', cursive;
+
+:root {
+  --color-one: #FE7028;
+  --color-one-dimmed: #dc5613;
+  --color-two: #000000;
+  --color-two-dimmed: rgb(14, 14, 14);
+
+}
+
+*,
+body,
+html {
+  padding: 10;
+  margin: 0;
+
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
+
+}
+
+body {
+
+  font-family: 'Oswald', sans-serif;
+  background-color: var(--color-two);
+  overflow: hidden;
+  color: #eee;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

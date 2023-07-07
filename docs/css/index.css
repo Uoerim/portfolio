@@ -1,0 +1,798 @@
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Iceland&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+:root {
+  --color-one: #FE7028;
+  --color-one-dimmed: #dc5613;
+  --color-two: #000000;
+  --color-two-dimmed: rgb(14, 14, 14);
+}
+
+*,
+body,
+html {
+  padding: 10;
+  margin: 0;
+  -webkit-user-select: none;
+  /* Safari */
+  /* IE 10 and IE 11 */
+  -moz-user-select: none;
+       user-select: none;
+  /* Standard syntax */
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: var(--color-two);
+  overflow: hidden;
+  color: #eee;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.main .view {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: left;
+}
+.main .view .welcoming-text {
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: -50px;
+}
+.main .view .welcoming-text h1 {
+  margin-top: -150px;
+  font-size: 250px;
+  color: white;
+  font-family: "Iceland", cursive;
+}
+.main .nav {
+  position: absolute;
+  height: 100vh;
+  width: 150px;
+  z-index: 3;
+  top: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .nav .my-name {
+  direction: rtl;
+  font-family: "Iceland", cursive;
+  font-size: 20px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+.main .nav .my-name .my-first-name {
+  color: var(--color-one);
+}
+.main .nav .my-name .my-last-name {
+  color: var(--color-one-dimmed);
+  margin-top: -15px;
+}
+.main .menu {
+  width: 100px;
+  position: absolute;
+  right: 50px;
+  transform: rotate(90deg);
+  display: flex;
+  justify-content: center;
+}
+.main .menu h3 {
+  margin: 30px;
+}
+.main .menu h3:hover {
+  cursor: pointer;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-one);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.container {
+  margin-top: -60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@-moz-document url-prefix() {
+  .container {
+    margin-top: -90px;
+  }
+}
+.container p {
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container p span.typed-text {
+  font-weight: normal;
+  color: var(--color-one);
+}
+
+.container p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+
+.container p span.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
+.social-area {
+  position: absolute;
+  background-color: rgba(87, 87, 87, 0.403);
+  border-radius: 10px;
+  bottom: 50px;
+  right: 50px;
+  width: 250px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 4;
+  transition: 0.1s;
+}
+.social-area .social-logo {
+  width: 30px;
+}
+.social-area .social-logo:hover { /* IE 9 */ /* Safari 3-8 */
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.logo {
+  left: 50px;
+  top: 50px;
+  position: absolute;
+  transition: 0.1s;
+  z-index: 4;
+}
+.logo img {
+  width: 55px;
+}
+.logo:hover { /* IE 9 */ /* Safari 3-8 */
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.profession-area {
+  color: white;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+.profession-area .profession {
+  color: white;
+  font-size: 25px;
+}
+.profession-area .profession:hover {
+  cursor: pointer;
+}
+.profession-area .profession::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 35px;
+  left: 0;
+  background-color: var(--color-one);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.profession-area .profession:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.profession-area .country {
+  font-size: 24px;
+  color: var(--color-one);
+  width: 105px;
+}
+.profession-area .country:hover {
+  cursor: pointer;
+}
+.profession-area .country::after {
+  content: "";
+  position: absolute;
+  width: 48%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.profession-area .country:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.resume-section {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-two);
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  overflow: auto;
+  transition: 0.8s ease-out;
+}
+.resume-section .top-section {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+}
+.resume-section .top-section .left-section {
+  width: calc(50% - 20px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+.resume-section .top-section .left-section .short-text-area {
+  border-radius: 10px;
+  background-color: var(--color-two-dimmed);
+  width: 100%;
+  height: calc(50% - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.resume-section .top-section .left-section .short-text-area h1 {
+  font-size: 3vw;
+  font-family: "Paytone One", sans-serif;
+}
+.resume-section .top-section .left-section .short-text-area .getcv-btn {
+  height: 80px;
+  width: 300px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-one);
+  transition: 0.1s;
+}
+.resume-section .top-section .left-section .short-text-area .getcv-btn h2 {
+  font-size: 40px;
+}
+.resume-section .top-section .left-section .short-text-area .getcv-btn:hover {
+  /* filter: brightness(0.75); */
+  background-color: var(--color-one-dimmed);
+  cursor: pointer;
+}
+.resume-section .top-section .left-section .numbers-section {
+  border-radius: 30px;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.resume-section .top-section .left-section .numbers-section > div {
+  height: 100%;
+  width: calc(33.3333333333% - 10px);
+  border-radius: 10px;
+}
+.resume-section .top-section .left-section .numbers-section .exp-section {
+  background-color: rgb(0, 255, 64);
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.resume-section .top-section .left-section .numbers-section .exp-section .exp-years {
+  font-size: 7vw;
+  font-family: "Iceland", cursive;
+}
+.resume-section .top-section .left-section .numbers-section .exp-section .exp-label {
+  font-size: 1.3vw;
+  color: rgb(202, 202, 202);
+}
+.resume-section .top-section .left-section .numbers-section .projects-sections {
+  background-color: rgb(255, 174, 0);
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.resume-section .top-section .left-section .numbers-section .projects-sections .proj-count {
+  font-size: 7vw;
+  font-family: "Iceland", cursive;
+}
+.resume-section .top-section .left-section .numbers-section .projects-sections .proj-label {
+  font-size: 1.3vw;
+  color: rgb(13, 13, 13);
+}
+.resume-section .top-section .left-section .numbers-section .clients-section {
+  background-color: rgb(255, 0, 76);
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.resume-section .top-section .left-section .numbers-section .clients-section .clients-count {
+  font-size: 7vw;
+  font-family: "Iceland", cursive;
+}
+.resume-section .top-section .left-section .numbers-section .clients-section .clients-label {
+  font-size: 1.3vw;
+  color: rgb(202, 202, 202);
+}
+.resume-section .top-section .right-section {
+  width: calc(50% - 40px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+.resume-section .top-section .right-section .top-menu {
+  width: 100%;
+  height: calc(15% - 10px);
+  background-color: var(--color-two-dimmed);
+  border-radius: 10px;
+  z-index: 9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resume-section .top-section .right-section .top-menu h1 {
+  margin: 10px;
+  font-size: 40px;
+}
+.resume-section .top-section .right-section .top-menu h1 span {
+  color: var(--color-one);
+}
+.resume-section .top-section .right-section .top-menu img {
+  width: 9%;
+}
+.resume-section .top-section .right-section .top-menu img:hover {
+  cursor: pointer;
+  filter: brightness(0.75);
+}
+.resume-section .top-section .right-section .data-section {
+  width: 100%;
+  height: calc(85% - 10px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.resume-section .top-section .right-section .data-section .picture-section {
+  border-radius: 10px;
+  height: 100%;
+  width: calc(50% - 10px);
+  background: url(../assets/profile-pic.jpg);
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.resume-section .top-section .right-section .data-section .info-section {
+  border-radius: 10px;
+  height: 100%;
+  width: calc(50% - 10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.resume-section .top-section .right-section .data-section .info-section div {
+  width: 100%;
+  height: calc(25% - 10px);
+  background-color: var(--color-two-dimmed);
+  border-radius: 10px;
+}
+.resume-section .top-section .right-section .data-section .info-section .name-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resume-section .top-section .right-section .data-section .info-section .name-section h2 {
+  font-size: 30px;
+}
+.resume-section .top-section .right-section .data-section .info-section .name-section h2 span {
+  color: var(--color-one);
+}
+.resume-section .top-section .right-section .data-section .info-section .work-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resume-section .top-section .right-section .data-section .info-section .work-section h2 {
+  font-size: 30px;
+}
+.resume-section .top-section .right-section .data-section .info-section .work-section h2 span {
+  color: var(--color-one);
+}
+.resume-section .top-section .right-section .data-section .info-section .basedin-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resume-section .top-section .right-section .data-section .info-section .basedin-section h2 {
+  font-size: 30px;
+}
+.resume-section .top-section .right-section .data-section .info-section .basedin-section h2 span {
+  color: var(--color-one);
+}
+.resume-section .top-section .right-section .data-section .info-section .work-sites-section {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resume-section .top-section .right-section .data-section .info-section .work-sites-section .linkedin-btn {
+  height: 100%;
+  width: calc(50% - 10px);
+  background-color: #0097D3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resume-section .top-section .right-section .data-section .info-section .work-sites-section .linkedin-btn img {
+  width: 35%;
+}
+.resume-section .top-section .right-section .data-section .info-section .work-sites-section .linkedin-btn:hover {
+  cursor: pointer;
+  filter: brightness(0.75);
+}
+.resume-section .top-section .right-section .data-section .info-section .work-sites-section .github-btn {
+  height: 100%;
+  width: calc(50% - 10px);
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resume-section .top-section .right-section .data-section .info-section .work-sites-section .github-btn img {
+  width: 30%;
+}
+.resume-section .top-section .right-section .data-section .info-section .work-sites-section .github-btn:hover {
+  cursor: pointer;
+  filter: brightness(0.75);
+}
+.resume-section .buttom-section {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: calc(40% - 20px);
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.resume-section .buttom-section .about-section {
+  height: calc(100% - 40px);
+  min-width: 700px;
+  background-color: var(--color-two-dimmed);
+  margin: 10px;
+  margin-right: 0px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+}
+.resume-section .buttom-section .about-section .languages-section {
+  min-width: 25%;
+  width: 25%;
+  margin: 20px;
+}
+.resume-section .buttom-section .about-section .languages-section > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.resume-section .buttom-section .about-section .vertical-column {
+  height: 80%;
+  width: 10px;
+  background-color: var(--color-one);
+}
+.resume-section .buttom-section .about-section h3 {
+  text-align: justify;
+  margin: 15px 0px 0px 20px;
+  font-size: 50px;
+  color: var(--color-one);
+}
+.resume-section .buttom-section .about-section p {
+  font-size: 23px;
+  text-align: justify;
+  margin: 15px 50px;
+}
+.resume-section .buttom-section .about-section h4 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.resume-section .buttom-section .about-section .stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.resume-section .buttom-section .about-section .stars div {
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+.resume-section .buttom-section .about-section .numstar-o div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, transparent 50%);
+}
+.resume-section .buttom-section .about-section .numstar-oo div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-ooo div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-ooo div:nth-child(2) {
+  background: linear-gradient(90deg, white 50%, transparent 50%);
+}
+.resume-section .buttom-section .about-section .numstar-oooo div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-oooo div:nth-child(2) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-ooooo div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-ooooo div:nth-child(2) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-ooooo div:nth-child(3) {
+  background: linear-gradient(90deg, white 50%, transparent 50%);
+}
+.resume-section .buttom-section .about-section .numstar-oooooo div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-oooooo div:nth-child(2) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-oooooo div:nth-child(3) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-ooooooo div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-ooooooo div:nth-child(2) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-ooooooo div:nth-child(3) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-ooooooo div:nth-child(4) {
+  background: linear-gradient(90deg, white 50%, transparent 50%);
+}
+.resume-section .buttom-section .about-section .numstar-oooooooo div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-oooooooo div:nth-child(2) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-oooooooo div:nth-child(3) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-oooooooo div:nth-child(4) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-ooooooooo div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-ooooooooo div:nth-child(2) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-ooooooooo div:nth-child(3) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-ooooooooo div:nth-child(4) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .about-section .numstar-ooooooooo div:nth-child(5) {
+  background: linear-gradient(90deg, white 50%, transparent 50%);
+}
+.resume-section .buttom-section .about-section .numstar-oooooooooo div {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section {
+  height: calc(100% - 40px);
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.resume-section .buttom-section .skills-section .skill {
+  height: 100%;
+  width: 300px;
+  background-color: var(--color-two-dimmed);
+  border-radius: 10px;
+  margin: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.resume-section .buttom-section .skills-section .skill img {
+  width: 50%;
+  margin-bottom: 30px;
+}
+.resume-section .buttom-section .skills-section .skill h3 {
+  font-size: 20px;
+}
+.resume-section .buttom-section .skills-section .skill .stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 60%;
+  margin-top: 30px;
+}
+.resume-section .buttom-section .skills-section .skill .stars div {
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+.resume-section .buttom-section .skills-section .skill .numstar-o div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, transparent 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-oo div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-ooo div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-ooo div:nth-child(2) {
+  background: linear-gradient(90deg, white 50%, transparent 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-oooo div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-oooo div:nth-child(2) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-ooooo div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-ooooo div:nth-child(2) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-ooooo div:nth-child(3) {
+  background: linear-gradient(90deg, white 50%, transparent 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-oooooo div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-oooooo div:nth-child(2) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-oooooo div:nth-child(3) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-ooooooo div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-ooooooo div:nth-child(2) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-ooooooo div:nth-child(3) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-ooooooo div:nth-child(4) {
+  background: linear-gradient(90deg, white 50%, transparent 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-oooooooo div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-oooooooo div:nth-child(2) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-oooooooo div:nth-child(3) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-oooooooo div:nth-child(4) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-ooooooooo div:nth-child(1) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-ooooooooo div:nth-child(2) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-ooooooooo div:nth-child(3) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-ooooooooo div:nth-child(4) {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-ooooooooo div:nth-child(5) {
+  background: linear-gradient(90deg, white 50%, transparent 50%);
+}
+.resume-section .buttom-section .skills-section .skill .numstar-oooooooooo div {
+  background: linear-gradient(90deg, white 50%, white 50%);
+}/*# sourceMappingURL=index.css.map */

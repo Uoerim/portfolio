@@ -1,0 +1,99 @@
+.social-area{
+    position: absolute;
+    background-color: rgba(87, 87, 87, 0.403);
+    border-radius: 10px;
+    bottom: 50px;
+    right: 50px;
+    width: 250px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 4;
+    transition: 0.1s;
+
+    .social-logo{
+        width: 30px;
+        &:hover{
+            -ms-transform: scale(1.2); /* IE 9 */
+            -webkit-transform: scale(1.2); /* Safari 3-8 */
+            transform: scale(1.2); 
+            cursor: pointer;
+        }
+    }
+}
+
+.logo{
+    left: 50px;
+    top: 50px;
+    position: absolute;
+    transition: 0.1s;
+    z-index: 4;
+    img{
+        width: 55px;
+    }
+    &:hover{
+        -ms-transform: scale(1.2); /* IE 9 */
+        -webkit-transform: scale(1.2); /* Safari 3-8 */
+        transform: scale(1.2); 
+        cursor: pointer;
+    }
+}
+
+.profession-area{
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    .profession{
+        color: white;
+        font-size: 25px;
+        &:hover{
+            cursor: pointer;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 3px;
+            bottom: 35px;
+            left: 0;
+            background-color: var(--color-one);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
+    }
+
+      
+    .country{
+        font-size: 24px;
+        color: var(--color-one);
+        width: 105px;
+        &:hover{
+            cursor: pointer;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 48%;
+            transform: scaleX(0);
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: #ffffff;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
+    }
+}
+
+
