@@ -31,7 +31,7 @@ If you have ideas to share, bugs to report or need support, you can either open 
   Open Source
 </h2>
 <p align="center">
-  <sub>Copyright © 2020-present, Uoerim</sub>
+  <sub>Copyright © 2023-present, Uoerim</sub>
 </p>
 <p align="center">Lofi Player <a href="https://github.com/Uoerim/lofi-player/blob/main/LICENSE">is MIT licensed</a></p>
 <p align="center">
