@@ -11,7 +11,7 @@
 const element = document.querySelector(".resume-section");
 element.addEventListener('wheel', (event) => {
 
-    document.querySelector(".buttom-section").scrollBy({
+    document.querySelector(".skills-section").scrollBy({
         left: event.deltaY < 0 ? -400 : 400,
         behavior: "smooth"
 
