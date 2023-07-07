@@ -7,8 +7,6 @@
 </p>
 
 
-# Info
-
 [Visit the website](https://uoerim.github.io/portfolio/)
 
 ### Support
