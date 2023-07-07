@@ -1,32 +1,19 @@
 <p align="center">
   <img src="/docs/assets/logo-U-favicon.svg" width="150" />
 </p>
-<h1 align="center">Lofi Player</h1>
-<p align="center">A simple lofi player with a pixelated style</p>
+<h1 align="center">My Portfolio</h1>
+<p align="center">A simple portfolio for my work</p>
 <p align="center">
 </p>
 
 
 # Info
 
-[Visit the website](https://uoerim.github.io/lofi-player/)
+[Visit the website](https://uoerim.github.io/portfolio/)
 
 ### Support
 
 If you have ideas to share, bugs to report or need support, you can either open an issue or join my [Discord server](https://discord.gg/GdxnspKYva).
-
-### What is it?
-
-Its a simple player with Lofi music style, builded with HTML, CSS and JavaScript, using Youtube to play live streams as background music.
-
-### How to clone project
-```
-git clone https://github.com/uoerim/lofi-player.git
-```
-- This project is made using pure HTML, CSS, JS therefore it doesn't require any extra stuff to download
-- To add more backgrounds add them in the 'gifs' folder and update the number of gifs in the 'data.json' present in the 'data' folder
-- To add more music sources add them in the 'music.json' in the 'data' folder
-
 
 ## Creators
 
