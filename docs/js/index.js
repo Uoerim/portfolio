@@ -1,14 +1,5 @@
 
-
-/* 
- */
-
-
-
-
-
-
-const element = document.querySelector(".resume-section");
+/* const element = document.querySelector(".resume-section");
 element.addEventListener('wheel', (event) => {
 
     document.querySelector(".skills-section").scrollBy({
@@ -16,7 +7,7 @@ element.addEventListener('wheel', (event) => {
         behavior: "smooth"
 
     });
-});
+}); */
 
 $(".resume-option").click(function (e) {
     e.preventDefault();
